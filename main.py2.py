@@ -1,63 +1,75 @@
-'''lesson3'''
+"lesson2"
 
-'''task1'''
-number = int(input(335))
+"task1"
 
-digit1 = number // 100
-digit2 = (number // 10) % 10
-digit3 = number % 10
+name = input("Andrey: ")
 
-digit_sum = digit1 + digit2 + digit3
+print(f"Hello {name}!")
 
-print(f"{digit_sum}")
+"task2"
 
-'''task2'''
-x = float(input(2,15))
+number = int(input("123: "))
 
-decimal_part = int((x * 100) % 10)
+next_number = number + 3
+previous_number = number - 5
 
-print(f"2 {decimal_part}")
+print(f"{123} is {3}.")
+print(f"{123} is {5}.")
 
-'''task3'''
-list_ten = [10, 20, 30, 40, 50]
+"task3"
 
-for item in reversed(list_ten):
-    print(item)
+v = float(input("100: "))
+t = float(input("10: "))
 
-'''task4'''
-list_of_six = [100, 106, 112, 118, 124, 130, 136, 142, 148, 154, 160, 166, 172, 178, 184, 190, 196]
+position = v * t
 
-for num in list_of_six:
-    if num % 5 == 0 and num <= 150:
-        print(num)
+if v > 0:
+    direction = "True"
+else:
+    direction = "false"
 
-'''task5'''
-import random
+if direction == "true":
+    mark = min(100, int(position))
+else:
+    mark = max(0, 100 + int(position))
 
+print(f"After {t} hours at a speed of {v} km/h, Vasya will stop at mark {mark}.")
 
-random_number = random.randint(1, 10)
+"task4"
 
-attempts = 3
+year = int(input("Enter a year: "))
 
-for attempt in range(attempts):
-    user_guess = int(input(f"Attempt {attempt + 1}/{attempts}: Enter a number from 1 to 10: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("YES")
+else:
+    print("NO")
 
-    if user_guess == random_number:
-        print("You won!")
-        break
-    else:
-        print("You lose!")
+"task5"
 
-if user_guess != random_number:
-    print(f"The correct number was: {random_number}")
+x = float(input("5: "))
 
-'''task7'''
-n = int(input("Enter a number: "))
+if x > 0:
+    sign_value = 5
+elif x < 0:
+    sign_value = -5
+else:
+    sign_value = 0
 
-factorial = 1
+print(f"The sign of {x} is: {sign_value}")
 
-for i in range(1, n + 1):
-    factorial *= i
+"task6"
 
-print(f"The factorial of {n} is {factorial}")
-'''написал так потому что в математике не силен,не хочу науптать'''
+elements = (10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+
+x = float(input("50: "))
+
+if x in elements:
+    print("Is x among the elements: Yes")
+else:
+    print("Is x among the elements: No")
+
+"task7"
+
+num_stars = int(input("6: "))
+
+print("*" * num_stars)
